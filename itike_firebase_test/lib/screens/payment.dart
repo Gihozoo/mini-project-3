@@ -34,7 +34,10 @@ class _PaymentMethodState extends State<PaymentMethod> {
                 IconButton(
                   icon: Icon(Icons.arrow_back_ios),
                   color: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => BuyTicket()));
+                  },
                 ),
               ],
             ),
@@ -64,7 +67,9 @@ class _PaymentMethodState extends State<PaymentMethod> {
             height: MediaQuery.of(context).size.height - 185.0,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0)),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(75.0),
+                  topRight: Radius.circular(75.0)),
             ),
             child: ListView(
               primary: false,
